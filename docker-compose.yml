@@ -1,0 +1,22 @@
+version: '3.0'
+
+services:
+  checkup:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./checkup.json:/project/checkup.json
+      - checkup-data:/storage
+  web:
+    restart: always
+    image: abiosoft/caddy:1.0.0-no-stats
+    volumes:
+      - checkup-data:/srv/storage
+      - ./statuspage:/srv
+    ports:
+      - 2020:2015
+
+volumes:
+  checkup-data:

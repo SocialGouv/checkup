@@ -464,4 +464,12 @@ docker build . -t checkup
 docker run -v $PWD/checkup.json:/project/checkup.json checkup
 ```
 
+### Running with docker-compose
+
+Comes with a caddy server and a persistent volume for the data.
+
+Edit `checkup.json` then run `docker-compose up -d` and you're good to go.
+
+You can edit the mounted `checkup.json` at any time to add services.
+
 

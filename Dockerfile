@@ -10,4 +10,4 @@ RUN go build -v -ldflags '-s' -o ../../checkup
 
 WORKDIR /project
 
-ENTRYPOINT ["./checkup"]
+ENTRYPOINT ["./checkup", "--store"]
