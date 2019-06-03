@@ -1,0 +1,25 @@
+{
+  "checkers": [
+    {
+      "type": "http",
+      "endpoint_name": "Google",
+      "endpoint_url": "http://www.google.com"
+    },
+    {
+      "type": "http",
+      "endpoint_name": "GitHub",
+      "endpoint_url": "https://github.com"
+    }
+  ],
+  "storage": {
+    "provider": "fs",
+    "dir": "/storage",
+    "url": "http://127.0.0.1:2015/storage"
+  },
+  "notifier": {
+    "name": "slack",
+    "username": "username",
+    "channel": "#channel-name",
+    "webhook": "webhook-url"
+  }
+}
